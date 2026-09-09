@@ -14,12 +14,15 @@
 
 <header>
     <h1>FitExercises</h1>
-    <select class="lang-select" id="lang-select">
-        <option value="ru">🇷🇺 Русский</option>
-        <option value="en">🇬🇧 English</option>
-        <option value="es">🇪🇸 Español</option>
-        <option value="tr">🇹🇷 Türkçe</option>
-    </select>
+    <div class="header-controls">
+        <select class="lang-select" id="lang-select">
+            <option value="ru">🇺 Русский</option>
+            <option value="en">🇬 English</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="tr">🇹 Türkçe</option>
+        </select>
+        <button class="btn-workout-mode" id="btn-workout-mode">🏋️ Тренировка</button>
+    </div>
 </header>
 
 <main>
@@ -32,7 +35,7 @@
             <option value="">Всё оборудование</option>
         </select>
         <button class="filter-select fav-toggle-btn" id="fav-toggle">
-            <span id="fav-icon"></span> 
+            <span id="fav-icon">🤍</span> 
             <span>Только избранное</span> 
             (<span id="fav-count">0</span>)
         </button>
@@ -43,7 +46,15 @@
         Загрузка базы упражнений...
     </div>
     
+    <div id="error-log-container" class="error-log-container" style="display: none;">
+        <h3> Лог ошибок:</h3>
+        <pre id="error-log"></pre>
+        <button class="btn-primary" onclick="document.getElementById('error-log-container').style.display='none'">Закрыть</button>
+    </div>
+    
     <div id="exercise-list" class="exercise-list"></div>
+    
+    <div id="workout-container" class="workout-container" style="display: none;"></div>
 </main>
 
 <div class="modal-overlay" id="modal-overlay"></div>
@@ -59,6 +70,7 @@
     <div class="modal-info" id="modal-info"></div>
 </div>
 
+<script type="module" src="js/logger.js"></script>
 <script type="module" src="js/app.js"></script>
 </body>
 </html>
