@@ -653,3 +653,32 @@
 .error-solutions li {
     margin-bottom: 8px;
 }
+
+
+/* Error Log Container */
+.error-log-container {
+    padding: 20px;
+    background: #1a1a2e;
+    border: 2px solid #ff4444;
+    border-radius: var(--radius-lg);
+    margin: 20px;
+}
+
+.error-log-container h3 {
+    color: #ff4444;
+    margin-top: 0;
+}
+
+#error-log {
+    background: #0f0f0f;
+    color: #ff6b6b;
+    padding: 16px;
+    border-radius: var(--radius-md);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin: 16px 0;
+}
